@@ -8,6 +8,7 @@ pp = pprint.PrettyPrinter(indent=4)
 
 urllib3.disable_warnings()
 
-url = BASE_URL + '?lat=' + LATITUDE + '&lon=' + LONGITUDE + '&appid=' + API_KEY
+url = BASE_URL + '?lat=' + LATITUDE + '&lon=' + LONGITUDE + '&exclude=minutely,hourly&units=imperial&appid=' + API_KEY
 weather = requests.get(url, verify=False)
-pp.pprint(weather.json())
+print(weather.json()['current'])
+#pp.pprint(weather.json())
