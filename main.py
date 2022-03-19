@@ -12,3 +12,6 @@ url = BASE_URL + '?lat=' + LATITUDE + '&lon=' + LONGITUDE + '&exclude=minutely,h
 weather_dale = requests.get(url, verify=False)
 print(weather_dale.json()['current'])
 #pp.pprint(weather.json())
+
+
+#NICE CODE
